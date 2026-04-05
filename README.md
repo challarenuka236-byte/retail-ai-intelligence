@@ -4,14 +4,6 @@
 
 ### AI-Powered Competitive Intelligence & Market Analysis for E-Commerce Retailers
 
-[![CI/CD Status](https://github.com/Nikhilgarg0/retail-ai-intelligence/workflows/Retail%20Intelligence%20CI%2FCD/badge.svg)](https://github.com/Nikhilgarg0/retail-ai-intelligence/actions)
-[![Python Version](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/)
-[![MongoDB](https://img.shields.io/badge/MongoDB-Atlas-green.svg)](https://www.mongodb.com/)
-[![Flask](https://img.shields.io/badge/Flask-3.0+-blue.svg)](https://flask.palletsprojects.com/)
-[![License](https://img.shields.io/badge/license-MIT-yellow.svg)](LICENSE)
-
-[Features](#-key-features) · [Architecture](#-system-architecture) · [Installation](#-installation) · [Usage](#-usage) · [Roadmap](#-roadmap) · [Contact](#-contact)
-
 </div>
 
 ---
@@ -70,21 +62,6 @@ Retail businesses constantly struggle with time-consuming manual price monitorin
 
 ---
 
-## 🖼️ Screenshots
-
-| Dashboard | Data Collection |
-|-----------|----------------|
-| ![Dashboard](docs/screenshots/dashboard.png) | ![Data Collection](docs/screenshots/Data-Collection.png) |
-
-| Product Explorer | AI Insights |
-|-----------------|-------------|
-| ![Product Explorer](docs/screenshots/Product-Explorer.png) | ![AI Insights](docs/screenshots/AI-Insights.png) |
-
-| Price Analytics | Reports |
-|----------------|---------|
-| ![Price Analytics](docs/screenshots/Price-Analytics.png) | ![Reports](docs/screenshots/Reports.png) |
-
----
 
 ## 🏗️ System Architecture
 
@@ -212,10 +189,6 @@ http://localhost:5000
 2. Choose a platform and click **Generate Analysis**
 3. Download the PDF report
 
-**Deep Analysis:**
-1. Select *Deep Analysis (Multi-Agent)*
-2. Wait ~5-6 minutes for the 5-agent collaboration to complete
-3. Review each agent's individual output and the final executive summary
 
 ### Track Prices
 1. Navigate to **Price Analytics**
@@ -316,33 +289,3 @@ Please ensure your code passes all tests and follows the existing style conventi
 
 ---
 
-## 📄 License
-
-This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
-
----
-
-## 📬 Contact
-
-**Nikhil Garg**
-
-[![GitHub](https://img.shields.io/badge/GitHub-Nikhilgarg0-181717?logo=github)](https://github.com/Nikhilgarg0/retail-ai-intelligence)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Nikhil--garg8982-0A66C2?logo=linkedin)](https://www.linkedin.com/in/Nikhil-garg8982)
-[![Email](https://img.shields.io/badge/Email-official.nikhilgarg%40gmail.com-D14836?logo=gmail)](mailto:official.nikhilgarg@gmail.com)
-
----
-
-## 🙏 Acknowledgments
-
-- [Google Gemini](https://deepmind.google/technologies/gemini/) — Powering quick AI analysis
-- [CrewAI](https://www.crewai.com/) — Multi-agent orchestration framework
-- [MongoDB Atlas](https://www.mongodb.com/atlas) — Cloud database infrastructure
-- [Flask](https://flask.palletsprojects.com/) — Lightweight web framework
-
----
-
-<div align="center">
-
-⭐ If you find this project useful, please consider giving it a star!
-
-</div>
