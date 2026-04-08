@@ -109,7 +109,7 @@ async function loadSidebarStats() {
   try {
     const s = await apiFetch('/api/stats');
     $('stat-products').textContent = fmt(s.total_products);
-    $('stat-platforms').textContent = fmt(4);
+    $('stat-platforms').textContent = fmt(2);
     $('stat-reports').textContent = fmt(s.total_reports);
     $('apiStatusDot').className = 'status-dot online';
     $('apiStatusText').textContent = 'API Connected';
@@ -130,10 +130,10 @@ async function loadDashboard() {
     $('d-total-products').textContent = fmt(stats.total_products);
     $('d-price-drops').textContent = fmt(stats.price_drops);
     $('d-price-increases').textContent = fmt(stats.price_increases);
-    $('d-platforms').textContent = fmt(4);
+    $('d-platforms').textContent = fmt(2);
 
     $('stat-products').textContent = fmt(stats.total_products);
-    $('stat-platforms').textContent = fmt(4);
+    $('stat-platforms').textContent = fmt(2);
     $('stat-reports').textContent = fmt(stats.total_reports);
 
     if (!recent.length) {
@@ -230,8 +230,6 @@ async function runMultiSearch() {
   const platforms = [];
   if ($('ms-amazon').checked) platforms.push('amazon');
   if ($('ms-flipkart').checked) platforms.push('flipkart');
-  if ($('ms-myntra')?.checked) platforms.push('myntra');
-  if ($('ms-ajio')?.checked) platforms.push('ajio');
   const btn = $('btnMultiSearch');
   const result = $('multiSearchResult');
 

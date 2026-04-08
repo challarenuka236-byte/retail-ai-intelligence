@@ -5,10 +5,14 @@ from bs4 import BeautifulSoup
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.common.by import By
 from webdriver_manager.chrome import ChromeDriverManager
 from config.settings import settings
 from src.utils.helpers import random_delay
 import logging
+import random
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -40,7 +44,6 @@ class BaseScraper:
         chrome_options.add_experimental_option("useAutomationExtension", False)
 
         # Random realistic viewport so all requests don't look identical
-        import random
         viewports = [(1366, 768), (1440, 900), (1536, 864), (1920, 1080)]
         width, height = random.choice(viewports)
         chrome_options.add_argument(f"--window-size={width},{height}")
@@ -90,7 +93,17 @@ class BaseScraper:
         try:
             driver = self.setup_driver()
             driver.get(url)
-            random_delay(3, 5)  # longer wait for JS-heavy pages
+
+            # Wait for at least one <li> to appear before grabbing page source
+            # This gives JS-rendered pages (Myntra, Ajio) time to load product cards
+            try:
+                WebDriverWait(driver, 10).until(
+                    EC.presence_of_element_located((By.TAG_NAME, "li"))
+                )
+            except Exception:
+                pass  # proceed anyway even if wait times out
+
+            random_delay(6, 8)  # extra buffer for JS-heavy pages
             html = driver.page_source
             logger.info(f"✅ Successfully fetched {url}")
             return html
