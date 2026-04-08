@@ -126,7 +126,7 @@ Retail businesses constantly struggle with time-consuming manual price monitorin
 
 **1. Clone the repository**
 ```bash
-git clone https://github.com/Nikhilgarg0/retail-ai-intelligence.git
+git clone https://github.com/challarenuka236-byte/retail-ai-intelligence.git
 cd retail-ai-intelligence
 ```
 
